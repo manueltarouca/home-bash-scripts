@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# Turn on the leds on rpi3!
+
+echo "Turning on [led0]"
+echo 255 > /sys/class/leds/led0/brightness && echo "[led0] turned on successfully..."
+echo "Turning on [led1]"
+echo 255 > /sys/class/leds/led1/brightness && echo "[led1] turned on successfully..."
+
+exit 0

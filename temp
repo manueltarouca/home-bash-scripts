@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+# Check the temperature
+
+TEMP=$(</sys/class/thermal/thermal_zone0/temp)
+TEMP_C=`echo "$TEMP/1000" | bc -l`
+
+printf "Temperature: %.3fºC\n" $TEMP_C
